@@ -68,6 +68,13 @@ and test its installation by checking the version:
   docker compose version
 #+end_src
 
+**** Use Docker in Rootless
+After completing the step before, run
+#+begin_src sh
+  dockerd-rootless-setuptool.sh check # check dependencies, install them if told to do so
+  dockerd-rootless-setuptool.sh install
+#+end_src
+
 * Modules
 ** Seshat (Forgejo)
 Seshat, daugher of Thoth, is an ancient Egyptian goddess for writing, wisdom, and knowledge. She's known for being a scribe and for her record keeping.
