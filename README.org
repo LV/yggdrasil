@@ -1,0 +1,22 @@
+#+title: Yggdrasil
+#+author: Luis Victoria
+
+#+BEGIN_HTML
+<div align="center">
+  <img src="/img/yggdrasil-logo-500.png" width="300"/>
+</div>
+#+END_HTML
+
+In Norse mythology, the cosmos revolve and are held together by the branches and roots of the mighty tree [[https://norse-mythology.org/cosmology/yggdrasil-and-the-well-of-urd/][Yggdrasil]].
+
+In this repository, /Yggdrasil/ is the network of which the entire infrastructure for my home network will come to rely on.
+
+** Kvasir - The Wise Raspberry Pi 5
+Kvasir amongst the wisest of all beings in the Norse mythology, and was birthed from the fermentation of berries that were spat into a vat together by the Vasir and Aethir gods as a form of a peace treaty. Kvasir was eventually killed by two dwarfs.
+
+In this repository, /Kvasir/ is the name of the Raspberry Pi 5 8GB machine that will serve as the first node of this infrastructure. It will host the following:
+
+- The webpage for my project [[http://odysseia.io/][odysseia.io]]
+- A Git Server via [[https://forgejo.org/][Forgejo]]
+- Perhaps an email server
+- Perhaps a Minecraft server
