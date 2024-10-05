@@ -29,7 +29,7 @@ In this repository, /Kvasir/ is the name of the Raspberry Pi 5 8GB machine that 
 
 - The webpage for my project [[http://odysseia.io/][odysseia.io]]
 - /Alkonost/: DNS forwarding via [[https://www.duckdns.org/][DuckDNS]]
-- /Seshat/: A Git Server via [[https://forgejo.org/][Forgejo]]
+- /Seshat/: A Git server via [[https://forgejo.org/][Forgejo]]
 - Perhaps an email server
 - Perhaps a Minecraft server
 
@@ -93,3 +93,19 @@ Seshat, daugher of Thoth, is an ancient Egyptian goddess for writing, wisdom, an
 In this repository, /Seshat/ is the Git instance used to store all code part of the Odysseia Project. It uses [[https://forgejo.org/][Forgejo]] as the system for this Git instance.
 
 Forgejo is the open-source program used to host Git instances (link to [[https://forgejo.org/docs/latest/admin/installation-docker/][docs]])
+
+*** Initial Configuration
+| Database type             | SQLite3                           |
+| Path                      | =/var/lib/gitea/data/gitea.db=    |
+| Instance title            | Seshat                            |
+| Instance slogan           | Littera Scripta Manet             |
+| Repository root path      | =/var/lib/gitea/git/repositories= |
+| Git LFS root path         | =/var/lib/gitea/git/lfs=          |
+| User to run as            | git                               |
+| Server domain             | LOCAL IP ADDRESS OF MACHINE       |
+| SSH server port           | 2222                              |
+| HTTP listen port          | 3000                              |
+| Base URL                  | http://LOCAL-IP-ADDRESS:3000/     |
+| Log path                  | =/var/lib/gitea/data/log=         |
+| Disable self-registration | Checked                           |
+| Enable update checker     | Checked                           |
