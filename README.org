@@ -6,7 +6,6 @@
   <img src="/img/yggdrasil-logo-500.png" width="300"/>
   <br>
   <small><a href="https://pixels.com/featured/yggdrasil-celtic-tree-of-reuben-iga.html?product=sticker">logo credit</a></small>
-  <br>
 </div>
 #+END_HTML
 
@@ -21,7 +20,6 @@ In this repository, /Yggdrasil/ is the network of which the entire infrastructur
   <img src="/img/kvasir-logo.png" width="300"/>
   <br>
   <small><a href="https://www.instagram.com/p/CpYBzMwtKcG/">logo credit</a></small>
-  <br>
 </div>
 #+END_HTML
 
@@ -30,7 +28,8 @@ Kvasir amongst the wisest of all beings in the Norse mythology, and was birthed 
 In this repository, /Kvasir/ is the name of the Raspberry Pi 5 8GB machine that will serve as the first node of this infrastructure. It will host the following:
 
 - The webpage for my project [[http://odysseia.io/][odysseia.io]]
-- A Git Server via [[https://forgejo.org/][Forgejo]]
+- /Alkonost/: DNS forwarding via [[https://www.duckdns.org/][DuckDNS]]
+- /Seshat/: A Git Server via [[https://forgejo.org/][Forgejo]]
 - Perhaps an email server
 - Perhaps a Minecraft server
 
