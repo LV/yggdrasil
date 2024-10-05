@@ -20,3 +20,49 @@ In this repository, /Kvasir/ is the name of the Raspberry Pi 5 8GB machine that 
 - A Git Server via [[https://forgejo.org/][Forgejo]]
 - Perhaps an email server
 - Perhaps a Minecraft server
+
+*** Setting Up the Machine
+**** Installing the OS
+The following assumes a completely fresh install of Raspbian 64-bit Minimal running Debian 12.7 Bookworm. See the  [[https://www.raspberrypi.com/documentation/computers/getting-started.html#installing-the-operating-system][official Raspberry Pi docs]] on installing the OS.
+
+**** Installing Docker
+Once the machine is up and running, set up Docker's ~apt~ repository to install the latest version (as per the [[https://docs.docker.com/engine/install/debian/#install-using-the-repository][official docs]]):
+#+begin_src sh
+  # Add Docker's official GPG key:
+  sudo apt-get update
+  sudo apt-get install ca-certificates curl
+  sudo install -m 0755 -d /etc/apt/keyrings
+  sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+  sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+  # Add the repository to Apt sources:
+  echo \
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+  sudo apt-get update
+#+end_src
+
+And install the latest version of Docker:
+#+begin_src sh
+  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+#+end_src
+
+Finally, test that Docker works:
+#+begin_src sh
+  sudo docker run hello-world
+#+end_src
+
+**** Installing Docker Compose
+This assumes you setup Docker's ~apt~ repository from the step before.
+
+As per the [[https://docs.docker.com/compose/install/linux/#install-using-the-repository][official docs]]:
+#+begin_src sh
+  sudo apt-get update
+  sudo apt-get install docker-compose-plugin
+#+end_src
+
+and test its installation by checking the version:
+#+begin_src sh
+  docker compose version
+#+end_src
