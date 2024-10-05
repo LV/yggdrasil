@@ -11,6 +11,7 @@ In Norse mythology, the cosmos revolve and are held together by the branches and
 
 In this repository, /Yggdrasil/ is the network of which the entire infrastructure for my home network will come to rely on.
 
+* Machines
 ** Kvasir - The Wise Raspberry Pi 5
 Kvasir amongst the wisest of all beings in the Norse mythology, and was birthed from the fermentation of berries that were spat into a vat together by the Vasir and Aethir gods as a form of a peace treaty. Kvasir was eventually killed by two dwarfs.
 
@@ -66,3 +67,11 @@ and test its installation by checking the version:
 #+begin_src sh
   docker compose version
 #+end_src
+
+* Modules
+** Seshat (Forgejo)
+Seshat, daugher of Thoth, is an ancient Egyptian goddess for writing, wisdom, and knowledge. She's known for being a scribe and for her record keeping.
+
+In this repository, /Seshat/ is the Git instance used to store all code part of the Odysseia Project. It uses [[https://forgejo.org/][Forgejo]] as the system for this Git instance.
+
+Forgejo is the open-source program used to host Git instances (link to [[https://forgejo.org/docs/latest/admin/installation-docker/][docs]])
