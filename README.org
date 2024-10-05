@@ -6,6 +6,7 @@
   <img src="/img/yggdrasil-logo-500.png" width="300"/>
   <br>
   <small><a href="https://pixels.com/featured/yggdrasil-celtic-tree-of-reuben-iga.html?product=sticker">logo credit</a></small>
+  <br>
 </div>
 #+END_HTML
 
@@ -20,6 +21,7 @@ In this repository, /Yggdrasil/ is the network of which the entire infrastructur
   <img src="/img/kvasir-logo.png" width="300"/>
   <br>
   <small><a href="https://www.instagram.com/p/CpYBzMwtKcG/">logo credit</a></small>
+  <br>
 </div>
 #+END_HTML
 
