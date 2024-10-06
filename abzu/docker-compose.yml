@@ -1,9 +1,6 @@
 services:
-  seshat:
-    extends:
-      file: ./seshat/docker-compose.yml
-      service: seshat
-
-networks:
-  abzu:
-
+  helloworld:
+    container_name: helloworld
+    image: crccheck/hello-world
+    ports:
+      - 80:8000
