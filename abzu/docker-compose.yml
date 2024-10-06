@@ -1,0 +1,9 @@
+services:
+  seshat:
+    extends:
+      file: ./seshat/docker-compose.yml
+      service: seshat
+
+networks:
+  abzu:
+
