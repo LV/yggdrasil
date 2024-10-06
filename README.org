@@ -109,3 +109,10 @@ Forgejo is the open-source program used to host Git instances (link to [[https:/
 | Log path                  | =/var/lib/gitea/data/log=         |
 | Disable self-registration | Checked                           |
 | Enable update checker     | Checked                           |
+
+** Alkonost (DuckDNS)
+Alkonost, a bird with a female head, would bring messages between the realms and was a symbol of good omens, symbolizing a bright future.
+
+Hence, the endpoint between Yggdrasil and the rest of the internet will flow through DuckDNS via the [[https://alkonost.duckdns.org/][alkonost.duckdns.org]] domain which will host the [[https://odysseia.io][odysseia.io]] domain.
+
+Why not just simply use /odysseia.duckdns.org/? It was taken :( Also I think naming each thing after mythology is cool.

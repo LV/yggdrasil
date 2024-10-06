@@ -1,6 +1,5 @@
-
 networks:
-  seshat-network:
+  kvasir-network:
     external: false
 
 services:
@@ -10,13 +9,34 @@ services:
     environment:
       - USER_UID=1000
       - USER_GID=1000
+      - GITEA__SERVER__ROOT_URL=http://alkonost.duckdns.org
+      - GITEA__SERVER__DOMAIN=alkonost.duckdns.org
+      - GITEA__SERVER__SSH_DOMAIN=alkonost.duckdns.org
     restart: always
     networks:
-      - seshat-network
+      - kvasir-network
     volumes:
-      - ./seshat:/data
+      - ./seshat/data:/data
+      - ./seshat/var:/var
       - /etc/timezone:/etc/timezone:ro
       - /etc/localtime:/etc/localtime:ro
     ports:
       - '3000:3000'
       - '2222:22'
+
+  alkonost:
+    image: lscr.io/linuxserver/duckdns:latest
+    container_name: alkonost
+    networks:
+      - kvasir-network
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Etc/UTC
+      - SUBDOMAINS=alkonost
+      - TOKEN=${DUCKDNS_TOKEN}
+      - UPDATE_IP=ipv4
+      - LOG_FILE=true
+    volumes:
+      - ./alkonost:/config
+    restart: unless-stopped
